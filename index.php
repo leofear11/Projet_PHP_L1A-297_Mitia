@@ -1,11 +1,12 @@
 <?php
 require_once './Encapsulation/Compte.php';
 require_once './Polymorphisme/Polymorphisme.php';
+require_once './Abtract/Abstract.php';
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -53,21 +54,68 @@ require_once './Polymorphisme/Polymorphisme.php';
         <h2 class="text-danger ">Héritage et Polymorphisme</h2>
         <pre><code class="language-php">
         &lt;?php
-        $compte1 = new Compte("1000");
-        echo "Solde: " . $compte1->getSolde() . "&lt;br&gt;";
-
-        $compte1->deposer(500);
-        echo "Nouveau solde après dépôt: " . $compte1->getSolde() . "&lt;br&gt;";
-
-        $compte1->retirer(200);
-        echo "Nouveau solde après retrait: " . $compte1->getSolde() . "&lt;br&gt;";
+            $etudiant = new Etudiant("Alice", 15);
+            echo $etudiant->afficher();
         ?&gt;
         </code></pre>
 
         <?php
-
+        $etudiant = new Etudiant("Alice", 15);
+        echo $etudiant->afficher();
         ?>
     </div>
+
+    <!-- Abstract -->
+    <div class="container my-5 p-3 border border-2 border-success rounded">
+        <h2 class="text-success ">Abstract</h2>
+        <pre><code class="language-php">
+        &lt;?php
+            $chien = new Chien("Rex");
+            echo $chien->parler() . "&lt;br&gt;";
+
+            $chat = new Chat("Miaou");
+            echo $chat->parler() . "&lt;br&gt;";
+        ?&gt;
+        </code></pre>
+
+        <?php
+        $chien = new Chien("Rex");
+        echo $chien->Crier() . "<br>";
+
+        $chat = new Chat("Miaou");
+        echo $chat->Crier() . "<br>";
+        ?>
+    </div>
+
+    <!-- BDD -->
+    <div class="container my-5 p-3 border border-2 border-warning rounded">
+        <h2 class="text-warning ">Base de données avec PDO</h2>
+        <pre><code class="language-php">
+        &lt;?php
+        // Connexion à une base de données MySQL avec PDO
+        ?&gt;
+        </code></pre>
+
+        <?php
+            // Connexion à une base de données MySQL avec PDO
+            $host = 'localhost'; // Adresse du serveur de base de données
+            $dbname = 'ecole'; // Nom de la base de données
+            $username = 'leo'; // Nom d'utilisateur de la base de données
+            $password = 'Gojo@0202'; // Mot de passe de la base de données
+
+            try{
+                // Création d'une instance PDO pour se connecter à la base de données
+                $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+                
+                // Configuration des options PDO
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Afficher les erreurs SQL
+                $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); // Récupérer les résultats sous forme de tableau associatif
+
+                echo "Connexion réussie à la base de données.";
+            } catch (PDOException $e) {
+                echo "Erreur de connexion : " . $e->getMessage();
+            }
+        ?>
 
 </body>
 

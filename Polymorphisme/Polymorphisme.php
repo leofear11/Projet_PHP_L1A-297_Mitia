@@ -5,7 +5,7 @@
 
     // Exemple de polymorphisme avec une classe de base et des classes dérivées
 
-    require_once 'Heritage.php'; // Inclure la classe Personne
+    require_once './Héritage/Heritage.php'; // Inclure la classe Personne
 
     // Classe dérivée : Etudiant
     class Etudiant extends Personne {

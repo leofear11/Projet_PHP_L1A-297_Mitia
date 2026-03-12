@@ -7,11 +7,11 @@
 
     try{
         // Création d'une instance PDO pour se connecter à la base de données
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
         
         // Configuration des options PDO
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Afficher les erreurs SQL
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); // Récupérer les résultats sous forme de tableau associatif
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Afficher les erreurs SQL
+        $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); // Récupérer les résultats sous forme de tableau associatif
 
         echo "Connexion réussie à la base de données.";
     } catch (PDOException $e) {
