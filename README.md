@@ -15,9 +15,15 @@ Il comprend les exercices 1 à 6 et met en œuvre la programmation orientée obj
 - Créer une classe abstraite **Animal** pour une méthode abstraite **crier()** et l'intégrer dans la classe **Chien** et **Chat**
 - Créer une classe abstraite **Animal** comprenant une méthode abstraite **crier()**, et créer les classes **Chien** et **Chat** qui héritent d'**Animal** pour démontrer l’abstraction.
 - Créer un fichier **BDD.php** permettant la connexion à la base de données MySQL et affichant un message de succès "Connexion réussie".
+- Créer un fichier **index.php** pour illustrer le POO et la connexion aux BDD en utlisant bootstrap-5.
+- Créer un fichier **index.php** qui montre l’utilisation de la POO et la connexion à la base de données, avec une interface stylée grâce à **Bootstrap 5**.
 ## 📂 Structure du projet
 
 ## 🗄️ Base de données
+Nom de la base : **ecole**
 
+La base de données est utilisée pour stocker les informations des élèves, enseignants et classes.
+
+![Capture de connexion BDD](images/image.png)
 ## 👨‍💻 Auteur
 Mitia L1A-297
