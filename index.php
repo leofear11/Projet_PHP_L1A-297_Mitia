@@ -93,29 +93,26 @@ require_once './Abtract/Abstract.php';
         <pre><code class="language-php">
         &lt;?php
         // Connexion à une base de données MySQL avec PDO
+        require_once './connect-PDO/BDD.php';
         ?&gt;
         </code></pre>
 
         <?php
-            // Connexion à une base de données MySQL avec PDO
-            $host = 'localhost'; // Adresse du serveur de base de données
-            $dbname = 'ecole'; // Nom de la base de données
-            $username = 'leo'; // Nom d'utilisateur de la base de données
-            $password = 'Gojo@0202'; // Mot de passe de la base de données
-
-            try{
-                // Création d'une instance PDO pour se connecter à la base de données
-                $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-                
-                // Configuration des options PDO
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Afficher les erreurs SQL
-                $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); // Récupérer les résultats sous forme de tableau associatif
-
-                echo "Connexion réussie à la base de données.";
-            } catch (PDOException $e) {
-                echo "Erreur de connexion : " . $e->getMessage();
-            }
+        require_once './connect-PDO/BDD.php';
         ?>
+    </div>
+
+    <!-- Badges des sections -->
+    <div class="d-flex w-50 ">
+        <span class="badge bg-primary">Primary</span>
+        <span class="badge bg-secondary">Secondary</span>
+        <span class="badge bg-success">Success</span>
+        <span class="badge bg-danger">Danger</span>
+        <span class="badge bg-warning">Warning</span>
+        <span class="badge bg-info">Info</span>
+        <span class="badge bg-light">Light</span>
+        <span class="badge bg-dark">Dark</span>
+    </div>
 
 </body>
 
