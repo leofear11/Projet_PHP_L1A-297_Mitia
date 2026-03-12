@@ -44,5 +44,8 @@ Nom de la base : **ecole**
 La base de données est utilisée pour stocker les informations des élèves, enseignants et classes.
 
 ![Capture de connexion BDD](images/image.png)
+## Utilisation
+- Placer les fichiers sur un serveur local (ex. XAMPP, WAMP, ou MAMP) afin de tester la page **index.php** et mieux comprendre la programmation orientée objet (POO) et l'utilisation de PDO pour la connexion à la base de données.
+
 ## 👨‍💻 Auteur
 Mitia L1A-297
