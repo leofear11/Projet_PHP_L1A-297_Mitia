@@ -103,15 +103,11 @@ require_once './Abtract/Abstract.php';
     </div>
 
     <!-- Badges des sections -->
-    <div class="d-flex w-50 ">
-        <span class="badge bg-primary">Primary</span>
-        <span class="badge bg-secondary">Secondary</span>
-        <span class="badge bg-success">Success</span>
-        <span class="badge bg-danger">Danger</span>
-        <span class="badge bg-warning">Warning</span>
-        <span class="badge bg-info">Info</span>
-        <span class="badge bg-light">Light</span>
-        <span class="badge bg-dark">Dark</span>
+    <div class="p-3">
+        <span class="badge bg-primary">Encapsulation</span>
+        <span class="badge bg-danger">Héritage et Polymorphisme</span>
+        <span class="badge bg-success">Abstract</span>
+        <span class="badge bg-warning">PDO</span>
     </div>
 
 </body>
